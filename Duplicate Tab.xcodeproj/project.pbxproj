@@ -9,16 +9,62 @@
 /* Begin PBXBuildFile section */
 		0239E1F421748AFE007C9F97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0239E1F321748AFE007C9F97 /* AppDelegate.swift */; };
 		0239E1F621748AFF007C9F97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0239E1F521748AFF007C9F97 /* Assets.xcassets */; };
-		0239E1F921748AFF007C9F97 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0239E1F721748AFF007C9F97 /* MainMenu.xib */; };
+		0239E20821748B14007C9F97 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0239E20721748B14007C9F97 /* Cocoa.framework */; };
+		0239E20B21748B14007C9F97 /* SafariExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0239E20A21748B14007C9F97 /* SafariExtensionHandler.swift */; };
+		0239E21921748B14007C9F97 /* Duplicate Tab Button.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0239E20521748B14007C9F97 /* Duplicate Tab Button.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0239E22021749F60007C9F97 /* ToolbarItemIcon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 0239E21F21749F60007C9F97 /* ToolbarItemIcon.pdf */; };
+		027764492174D57C00E12C84 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027764482174D57C00E12C84 /* main.swift */; };
+		0277644C2174D5B800E12C84 /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0277644A2174D5B800E12C84 /* MainWindowController.swift */; };
+		0277644F2174D85F00E12C84 /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0277644E2174D85F00E12C84 /* SetupViewController.swift */; };
+		027764512174DF6800E12C84 /* SetupPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027764502174DF6800E12C84 /* SetupPageController.swift */; };
+		027764532175D6EF00E12C84 /* NSPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027764522175D6EF00E12C84 /* NSPageControl.swift */; };
+		027764552175F5E500E12C84 /* NSLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027764542175F5E500E12C84 /* NSLabel.swift */; };
+		02776459217618C600E12C84 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02776458217618C600E12C84 /* Colors.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0239E21721748B14007C9F97 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0239E1E821748AFD007C9F97 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0239E20421748B14007C9F97;
+			remoteInfo = "Duplicate Tab Button";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0239E21D21748B14007C9F97 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				0239E21921748B14007C9F97 /* Duplicate Tab Button.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0239E1F021748AFE007C9F97 /* Duplicate Tab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Duplicate Tab.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0239E1F321748AFE007C9F97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0239E1F521748AFF007C9F97 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		0239E1F821748AFF007C9F97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		0239E1FA21748AFF007C9F97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0239E1FB21748AFF007C9F97 /* Duplicate_Tab.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Duplicate_Tab.entitlements; sourceTree = "<group>"; };
+		0239E20521748B14007C9F97 /* Duplicate Tab Button.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Duplicate Tab Button.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0239E20721748B14007C9F97 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		0239E20A21748B14007C9F97 /* SafariExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariExtensionHandler.swift; sourceTree = "<group>"; };
+		0239E21121748B14007C9F97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0239E21621748B14007C9F97 /* Duplicate_Tab_Button.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Duplicate_Tab_Button.entitlements; sourceTree = "<group>"; };
+		0239E21F21749F60007C9F97 /* ToolbarItemIcon.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ToolbarItemIcon.pdf; sourceTree = "<group>"; };
+		027764482174D57C00E12C84 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		0277644A2174D5B800E12C84 /* MainWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
+		0277644E2174D85F00E12C84 /* SetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
+		027764502174DF6800E12C84 /* SetupPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupPageController.swift; sourceTree = "<group>"; };
+		027764522175D6EF00E12C84 /* NSPageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSPageControl.swift; sourceTree = "<group>"; };
+		027764542175F5E500E12C84 /* NSLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSLabel.swift; sourceTree = "<group>"; };
+		02776458217618C600E12C84 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +75,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0239E20221748B14007C9F97 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0239E20821748B14007C9F97 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -36,6 +90,8 @@
 			isa = PBXGroup;
 			children = (
 				0239E1F221748AFE007C9F97 /* Duplicate Tab */,
+				0239E20921748B14007C9F97 /* Duplicate Tab Button */,
+				0239E20621748B14007C9F97 /* Frameworks */,
 				0239E1F121748AFE007C9F97 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -44,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				0239E1F021748AFE007C9F97 /* Duplicate Tab.app */,
+				0239E20521748B14007C9F97 /* Duplicate Tab Button.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -52,12 +109,37 @@
 			isa = PBXGroup;
 			children = (
 				0239E1F321748AFE007C9F97 /* AppDelegate.swift */,
+				0277644A2174D5B800E12C84 /* MainWindowController.swift */,
+				027764502174DF6800E12C84 /* SetupPageController.swift */,
+				0277644E2174D85F00E12C84 /* SetupViewController.swift */,
+				027764542175F5E500E12C84 /* NSLabel.swift */,
+				027764522175D6EF00E12C84 /* NSPageControl.swift */,
+				02776458217618C600E12C84 /* Colors.swift */,
+				027764482174D57C00E12C84 /* main.swift */,
 				0239E1F521748AFF007C9F97 /* Assets.xcassets */,
-				0239E1F721748AFF007C9F97 /* MainMenu.xib */,
 				0239E1FA21748AFF007C9F97 /* Info.plist */,
 				0239E1FB21748AFF007C9F97 /* Duplicate_Tab.entitlements */,
 			);
 			path = "Duplicate Tab";
+			sourceTree = "<group>";
+		};
+		0239E20621748B14007C9F97 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0239E20721748B14007C9F97 /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0239E20921748B14007C9F97 /* Duplicate Tab Button */ = {
+			isa = PBXGroup;
+			children = (
+				0239E20A21748B14007C9F97 /* SafariExtensionHandler.swift */,
+				0239E21121748B14007C9F97 /* Info.plist */,
+				0239E21F21749F60007C9F97 /* ToolbarItemIcon.pdf */,
+				0239E21621748B14007C9F97 /* Duplicate_Tab_Button.entitlements */,
+			);
+			path = "Duplicate Tab Button";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -70,15 +152,36 @@
 				0239E1EC21748AFE007C9F97 /* Sources */,
 				0239E1ED21748AFE007C9F97 /* Frameworks */,
 				0239E1EE21748AFE007C9F97 /* Resources */,
+				0239E21D21748B14007C9F97 /* Embed App Extensions */,
+				02776456217610CE00E12C84 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				0239E21821748B14007C9F97 /* PBXTargetDependency */,
 			);
 			name = "Duplicate Tab";
 			productName = "Duplicate Tab";
 			productReference = 0239E1F021748AFE007C9F97 /* Duplicate Tab.app */;
 			productType = "com.apple.product-type.application";
+		};
+		0239E20421748B14007C9F97 /* Duplicate Tab Button */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0239E21A21748B14007C9F97 /* Build configuration list for PBXNativeTarget "Duplicate Tab Button" */;
+			buildPhases = (
+				0239E20121748B14007C9F97 /* Sources */,
+				0239E20221748B14007C9F97 /* Frameworks */,
+				0239E20321748B14007C9F97 /* Resources */,
+				02776457217610DA00E12C84 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Duplicate Tab Button";
+			productName = "Duplicate Tab Button";
+			productReference = 0239E20521748B14007C9F97 /* Duplicate Tab Button.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -91,6 +194,14 @@
 				ORGANIZATIONNAME = "Payson Wallach";
 				TargetAttributes = {
 					0239E1EF21748AFE007C9F97 = {
+						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.HardenedRuntime = {
+								enabled = 1;
+							};
+						};
+					};
+					0239E20421748B14007C9F97 = {
 						CreatedOnToolsVersion = 10.0;
 					};
 				};
@@ -109,6 +220,7 @@
 			projectRoot = "";
 			targets = (
 				0239E1EF21748AFE007C9F97 /* Duplicate Tab */,
+				0239E20421748B14007C9F97 /* Duplicate Tab Button */,
 			);
 		};
 /* End PBXProject section */
@@ -119,33 +231,89 @@
 			buildActionMask = 2147483647;
 			files = (
 				0239E1F621748AFF007C9F97 /* Assets.xcassets in Resources */,
-				0239E1F921748AFF007C9F97 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0239E20321748B14007C9F97 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0239E22021749F60007C9F97 /* ToolbarItemIcon.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		02776456217610CE00E12C84 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "buildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"\n";
+		};
+		02776457217610DA00E12C84 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "buildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0239E1EC21748AFE007C9F97 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				027764552175F5E500E12C84 /* NSLabel.swift in Sources */,
+				02776459217618C600E12C84 /* Colors.swift in Sources */,
+				027764512174DF6800E12C84 /* SetupPageController.swift in Sources */,
+				0277644F2174D85F00E12C84 /* SetupViewController.swift in Sources */,
+				027764492174D57C00E12C84 /* main.swift in Sources */,
+				027764532175D6EF00E12C84 /* NSPageControl.swift in Sources */,
 				0239E1F421748AFE007C9F97 /* AppDelegate.swift in Sources */,
+				0277644C2174D5B800E12C84 /* MainWindowController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0239E20121748B14007C9F97 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0239E20B21748B14007C9F97 /* SafariExtensionHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		0239E1F721748AFF007C9F97 /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0239E1F821748AFF007C9F97 /* Base */,
-			);
-			name = MainMenu.xib;
-			sourceTree = "<group>";
+/* Begin PBXTargetDependency section */
+		0239E21821748B14007C9F97 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0239E20421748B14007C9F97 /* Duplicate Tab Button */;
+			targetProxy = 0239E21721748B14007C9F97 /* PBXContainerItemProxy */;
 		};
-/* End PBXVariantGroup section */
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		0239E1FC21748AFF007C9F97 /* Debug */ = {
@@ -266,11 +434,13 @@
 		0239E1FF21748AFF007C9F97 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Duplicate Tab/Duplicate_Tab.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = GQRYYNPEU3;
+				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "Duplicate Tab/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -285,11 +455,13 @@
 		0239E20021748AFF007C9F97 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Duplicate Tab/Duplicate_Tab.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = GQRYYNPEU3;
+				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "Duplicate Tab/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -297,6 +469,44 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.paysonwallach.Duplicate-Tab";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
+		0239E21B21748B14007C9F97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Duplicate Tab Button/Duplicate_Tab_Button.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GQRYYNPEU3;
+				INFOPLIST_FILE = "Duplicate Tab Button/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.paysonwallach.Duplicate-Tab.Duplicate-Tab-Button";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		0239E21C21748B14007C9F97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Duplicate Tab Button/Duplicate_Tab_Button.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GQRYYNPEU3;
+				INFOPLIST_FILE = "Duplicate Tab Button/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.paysonwallach.Duplicate-Tab.Duplicate-Tab-Button";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
@@ -318,6 +528,15 @@
 			buildConfigurations = (
 				0239E1FF21748AFF007C9F97 /* Debug */,
 				0239E20021748AFF007C9F97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0239E21A21748B14007C9F97 /* Build configuration list for PBXNativeTarget "Duplicate Tab Button" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0239E21B21748B14007C9F97 /* Debug */,
+				0239E21C21748B14007C9F97 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
