@@ -19,7 +19,6 @@
 		027764512174DF6800E12C84 /* SetupPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027764502174DF6800E12C84 /* SetupPageController.swift */; };
 		027764532175D6EF00E12C84 /* NSPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027764522175D6EF00E12C84 /* NSPageControl.swift */; };
 		027764552175F5E500E12C84 /* NSLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027764542175F5E500E12C84 /* NSLabel.swift */; };
-		02776459217618C600E12C84 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02776458217618C600E12C84 /* Colors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +63,6 @@
 		027764502174DF6800E12C84 /* SetupPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupPageController.swift; sourceTree = "<group>"; };
 		027764522175D6EF00E12C84 /* NSPageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSPageControl.swift; sourceTree = "<group>"; };
 		027764542175F5E500E12C84 /* NSLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSLabel.swift; sourceTree = "<group>"; };
-		02776458217618C600E12C84 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +84,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0217E336217766730008D0D0 /* Utility Classes */ = {
+			isa = PBXGroup;
+			children = (
+				027764542175F5E500E12C84 /* NSLabel.swift */,
+				027764522175D6EF00E12C84 /* NSPageControl.swift */,
+			);
+			path = "Utility Classes";
+			sourceTree = "<group>";
+		};
 		0239E1E721748AFD007C9F97 = {
 			isa = PBXGroup;
 			children = (
@@ -112,10 +119,8 @@
 				0277644A2174D5B800E12C84 /* MainWindowController.swift */,
 				027764502174DF6800E12C84 /* SetupPageController.swift */,
 				0277644E2174D85F00E12C84 /* SetupViewController.swift */,
-				027764542175F5E500E12C84 /* NSLabel.swift */,
-				027764522175D6EF00E12C84 /* NSPageControl.swift */,
-				02776458217618C600E12C84 /* Colors.swift */,
 				027764482174D57C00E12C84 /* main.swift */,
+				0217E336217766730008D0D0 /* Utility Classes */,
 				0239E1F521748AFF007C9F97 /* Assets.xcassets */,
 				0239E1FA21748AFF007C9F97 /* Info.plist */,
 				0239E1FB21748AFF007C9F97 /* Duplicate_Tab.entitlements */,
@@ -287,7 +292,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				027764552175F5E500E12C84 /* NSLabel.swift in Sources */,
-				02776459217618C600E12C84 /* Colors.swift in Sources */,
 				027764512174DF6800E12C84 /* SetupPageController.swift in Sources */,
 				0277644F2174D85F00E12C84 /* SetupViewController.swift in Sources */,
 				027764492174D57C00E12C84 /* main.swift in Sources */,
@@ -367,7 +371,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -422,7 +426,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -446,6 +450,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.paysonwallach.Duplicate-Tab";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -467,6 +472,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.paysonwallach.Duplicate-Tab";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
