@@ -14,11 +14,11 @@
 		0239E21921748B14007C9F97 /* Duplicate Tab Button.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0239E20521748B14007C9F97 /* Duplicate Tab Button.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0239E22021749F60007C9F97 /* ToolbarItemIcon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 0239E21F21749F60007C9F97 /* ToolbarItemIcon.pdf */; };
 		027764492174D57C00E12C84 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027764482174D57C00E12C84 /* main.swift */; };
-		0277644C2174D5B800E12C84 /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0277644A2174D5B800E12C84 /* MainWindowController.swift */; };
 		0277644F2174D85F00E12C84 /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0277644E2174D85F00E12C84 /* SetupViewController.swift */; };
 		027764512174DF6800E12C84 /* SetupPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027764502174DF6800E12C84 /* SetupPageController.swift */; };
 		027764532175D6EF00E12C84 /* NSPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027764522175D6EF00E12C84 /* NSPageControl.swift */; };
 		027764552175F5E500E12C84 /* NSLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027764542175F5E500E12C84 /* NSLabel.swift */; };
+		02C346302178D88000B74E62 /* SetupWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C3462F2178D88000B74E62 /* SetupWindow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,11 +58,11 @@
 		0239E21621748B14007C9F97 /* Duplicate_Tab_Button.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Duplicate_Tab_Button.entitlements; sourceTree = "<group>"; };
 		0239E21F21749F60007C9F97 /* ToolbarItemIcon.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ToolbarItemIcon.pdf; sourceTree = "<group>"; };
 		027764482174D57C00E12C84 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		0277644A2174D5B800E12C84 /* MainWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
 		0277644E2174D85F00E12C84 /* SetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
 		027764502174DF6800E12C84 /* SetupPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupPageController.swift; sourceTree = "<group>"; };
 		027764522175D6EF00E12C84 /* NSPageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSPageControl.swift; sourceTree = "<group>"; };
 		027764542175F5E500E12C84 /* NSLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSLabel.swift; sourceTree = "<group>"; };
+		02C3462F2178D88000B74E62 /* SetupWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupWindow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,7 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				0239E1F321748AFE007C9F97 /* AppDelegate.swift */,
-				0277644A2174D5B800E12C84 /* MainWindowController.swift */,
+				02C3462F2178D88000B74E62 /* SetupWindow.swift */,
 				027764502174DF6800E12C84 /* SetupPageController.swift */,
 				0277644E2174D85F00E12C84 /* SetupViewController.swift */,
 				027764482174D57C00E12C84 /* main.swift */,
@@ -295,9 +295,9 @@
 				027764512174DF6800E12C84 /* SetupPageController.swift in Sources */,
 				0277644F2174D85F00E12C84 /* SetupViewController.swift in Sources */,
 				027764492174D57C00E12C84 /* main.swift in Sources */,
+				02C346302178D88000B74E62 /* SetupWindow.swift in Sources */,
 				027764532175D6EF00E12C84 /* NSPageControl.swift in Sources */,
 				0239E1F421748AFE007C9F97 /* AppDelegate.swift in Sources */,
-				0277644C2174D5B800E12C84 /* MainWindowController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

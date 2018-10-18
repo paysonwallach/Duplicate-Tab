@@ -19,11 +19,11 @@
 import Cocoa
 
 /**
-A view that displays one or more lines of read-only text, often used in conjunction with controls to describe their intended purpose.
+ A view that displays one or more lines of read-only text, often used in conjunction with controls to describe their intended purpose.
  
-The appearance of labels is configurable, and they can display attributed strings, allowing you to customize the appearance of substrings within a label. You can add labels to your interface programmatically or by using Interface Builder.
+ The appearance of labels is configurable, and they can display attributed strings, allowing you to customize the appearance of substrings within a label. You can add labels to your interface programmatically or by using Interface Builder.
  
-The following steps are required to add a label to your interface:
+ The following steps are required to add a label to your interface:
  
  * Supply either a string or an attributed string that represents the content.
  
@@ -32,7 +32,7 @@ The following steps are required to add a label to your interface:
  * Set up Auto Layout rules to govern the size and position of the label in your interface.
  
  * Provide accessibility information and localized strings.
-*/
+ */
 @IBDesignable
 open class NSLabel: NSView {
     
@@ -41,10 +41,10 @@ open class NSLabel: NSView {
     // MARK: - Properties
     
     /**
-    The current text that is displayed by the label.
- 
-    This property is nil by default. Assigning a new value to this property also replaces the value of the attributedText property with the same text without any inherent style attributes, instead the label styles the new string using shadowColor, textAlignment, and other style-related properties of the class.
-    */
+     The current text that is displayed by the label.
+     
+     This property is nil by default. Assigning a new value to this property also replaces the value of the attributedText property with the same text without any inherent style attributes, instead the label styles the new string using shadowColor, textAlignment, and other style-related properties of the class.
+     */
     @IBInspectable
     public var text: String? {
         didSet {
@@ -54,10 +54,10 @@ open class NSLabel: NSView {
     }
     
     /**
-    The current styled text that is displayed by the label.
- 
-    This property is nil by default. Assigning a new value to this property also replaces the value of the text property with the same string data, although without any formatting information. In addition, assigning a new a value updates the values in the font, textColor, and other style-related properties so that they reflect the style information starting at location 0 in the attributed string.
-    */
+     The current styled text that is displayed by the label.
+     
+     This property is nil by default. Assigning a new value to this property also replaces the value of the text property with the same string data, although without any formatting information. In addition, assigning a new a value updates the values in the font, textColor, and other style-related properties so that they reflect the style information starting at location 0 in the attributed string.
+     */
     @IBInspectable
     public var attributedText: NSAttributedString? {
         didSet {
@@ -67,48 +67,38 @@ open class NSLabel: NSView {
     }
     
     /**
-    The font used to display the text.
- 
-    If you are not using styled text, this property applies to the entire text string in the text property.
-    */
+     The font used to display the text.
+     
+     If you are not using styled text, this property applies to the entire text string in the text property.
+     */
     @IBInspectable
     public var font: NSFont
     
     /**
-    The color of the text when the system's appearance is "Light".
- 
-    If you are not using styled text, this property applies to the entire text string in the text property.
-    
-    The default value for this property is a black color (set through the black class property of UIColor).
-    */
-    @IBInspectable
-    public var textColorLight: NSColor
-    
-    /**
-     The color of the text when the system's appearance is "Dark".
+     The color of the text.
      
      If you are not using styled text, this property applies to the entire text string in the text property.
      
-     The default value for this property is a white color (set through the white class property of UIColor).
+     The default value for this property is a black color (set through the black class property of UIColor).
      */
     @IBInspectable
-    public var textColorDark: NSColor
+    public var textColor: NSColor
     
     /**
-    The view’s background color.
-
-    The default value is nil, which results in a transparent background color.
-    */
+     The view’s background color.
+     
+     The default value is nil, which results in a transparent background color.
+     */
     @IBInspectable
     public var backgroundColor: NSColor
     
     /**
-    The technique to use for aligning the text.
- 
-    If you are not using styled text, this property applies to the entire text string in the text property.
+     The technique to use for aligning the text.
      
-    In macOS 10.11 and later, the default value of this property is NSTextAlignment.natural; prior to macOS 10.11, the default value is NSTextAlignment.left.
-    */
+     If you are not using styled text, this property applies to the entire text string in the text property.
+     
+     In macOS 10.11 and later, the default value of this property is NSTextAlignment.natural; prior to macOS 10.11, the default value is NSTextAlignment.left.
+     */
     @IBInspectable
     public var textAlignment: NSTextAlignment {
         didSet {
@@ -118,10 +108,10 @@ open class NSLabel: NSView {
     }
     
     /**
-    The technique to use for wrapping and truncating the label’s text.
- 
-    This property is set to NSLineBreakMode.byTruncatingTail by default.
-    */
+     The technique to use for wrapping and truncating the label’s text.
+     
+     This property is set to NSLineBreakMode.byTruncatingTail by default.
+     */
     @IBInspectable
     public var lineBreakMode: NSLineBreakMode {
         didSet {
@@ -131,72 +121,72 @@ open class NSLabel: NSView {
     }
     
     /**
-    A Boolean value indicating whether the font size should be reduced in order to fit the title string into the label’s bounding rectangle.
- 
-    This feature is yet to be implemented
-    */
+     A Boolean value indicating whether the font size should be reduced in order to fit the title string into the label’s bounding rectangle.
+     
+     This feature is yet to be implemented
+     */
     @IBInspectable
     public var adjustsFontSizeToFitWidth: Bool
     
     /**
-    The minimum scale factor supported for the label’s text.
- 
-    This feature is yet to be implemented
-    */
+     The minimum scale factor supported for the label’s text.
+     
+     This feature is yet to be implemented
+     */
     @IBInspectable
     public var minimumScaleFactor: CGFloat
     
     /**
-    The maximum number of lines to use for rendering text.
- 
-    This property controls the maximum number of lines to use in order to fit the label’s text into its bounding rectangle. The default value for this property is 1. To remove any maximum limit, and use as many lines as needed, set the value of this property to 0.
-    
-    If you constrain your text using this property, any text that does not fit within the maximum number of lines and inside the bounding rectangle of the label is truncated using the appropriate line break mode, as specified by the lineBreakMode property.
-    */
+     The maximum number of lines to use for rendering text.
+     
+     This property controls the maximum number of lines to use in order to fit the label’s text into its bounding rectangle. The default value for this property is 1. To remove any maximum limit, and use as many lines as needed, set the value of this property to 0.
+     
+     If you constrain your text using this property, any text that does not fit within the maximum number of lines and inside the bounding rectangle of the label is truncated using the appropriate line break mode, as specified by the lineBreakMode property.
+     */
     @IBInspectable
     public var numberOfLines: Int
     
     /**
-    The highlight color applied to the label’s text.
- 
-    This color is applied to the label automatically whenever the isHighlighted property is set to true.
-    
-    The default value of this property is nil.
+     The highlight color applied to the label’s text.
+     
+     This color is applied to the label automatically whenever the isHighlighted property is set to true.
+     
+     The default value of this property is nil.
      */
     @IBInspectable
     public var highlightedTextColor: NSColor?
     
     /**
-    A boolean value indicating whether the label should be drawn with a highlight.
- 
-    In order for the highlight to be drawn, the highlightedTextColor property must contain a non-nil value.
-    
-    The default value of this property is false.
-    */
+     A boolean value indicating whether the label should be drawn with a highlight.
+     
+     In order for the highlight to be drawn, the highlightedTextColor property must contain a non-nil value.
+     
+     The default value of this property is false.
+     */
     @IBInspectable
     public var isHighlighted: Bool
     
     /**
-    The shadow color of the text.
- 
-    The default value for this property is nil, which indicates that no shadow is drawn. In addition to this property, you may also want to change the default shadow offset by modifying the shadowOffset property. Text shadows are drawn with the specified offset and color and no blurring.
-    */
+     The shadow color of the text.
+     
+     The default value for this property is nil, which indicates that no shadow is drawn. In addition to this property, you may also want to change the default shadow offset by modifying the shadowOffset property. Text shadows are drawn with the specified offset and color and no blurring.
+     */
     @IBInspectable
     public var shadowColor: NSColor?
     
     /**
-    The shadow offset (measured in points) for the text.
- 
-    The shadow color must be non-nil for this property to have any effect. The default offset size is (0, -1), which indicates a shadow one point above the text. Text shadows are drawn with the specified offset and color and no blurring.
-    */
+     The shadow offset (measured in points) for the text.
+     
+     The shadow color must be non-nil for this property to have any effect. The default offset size is (0, -1), which indicates a shadow one point above the text. Text shadows are drawn with the specified offset and color and no blurring.
+     */
     @IBInspectable
     public var shadowOffset: CGSize
     
     /**
-    The preferred maximum width (in points) for a multiline label.
- 
-    This property affects the size of the label when layout constraints are applied to it. During layout, if the text extends beyond the width specified by this property, the additional text flows to one or more new lines, increasing the height of the label.
-    */
+     The preferred maximum width (in points) for a multiline label.
+     
+     This property affects the size of the label when layout constraints are applied to it. During layout, if the text extends beyond the width specified by this property, the additional text flows to one or more new lines, increasing the height of the label.
+     */
     public var preferredMaxLayoutWidth: CGFloat
     
     private var drawingRect = NSRect.zero
@@ -205,8 +195,7 @@ open class NSLabel: NSView {
     
     override init(frame frameRect: NSRect) {
         self.font = NSFont.labelFont(ofSize: 12.0)
-        self.textColorLight = NSColor.black
-        self.textColorDark = NSColor.white
+        self.textColor = NSColor.textColor
         self.backgroundColor = defaultBackgroundColor
         self.numberOfLines = 1
         
@@ -236,8 +225,7 @@ open class NSLabel: NSView {
         }
         
         self.font = decoder.decodeObject(forKey: "font") as! NSFont
-        self.textColorLight = decoder.decodeObject(forKey: "textColorLight") as! NSColor
-        self.textColorDark = decoder.decodeObject(forKey: "textColorDark") as! NSColor
+        self.textColor = decoder.decodeObject(forKey: "textColor") as! NSColor
         self.backgroundColor = decoder.decodeObject(forKey: "backgroundColor") as! NSColor
         
         if let textAlignment = decoder.decodeObject(forKey: "textAlignment") as? NSTextAlignment {
@@ -289,8 +277,7 @@ open class NSLabel: NSView {
         }
         
         aCoder.encode(font, forKey: "font")
-        aCoder.encode(textColorLight, forKey: "textColorLight")
-        aCoder.encode(textColorDark, forKey: "textColorDark")
+        aCoder.encode(textColor, forKey: "textColor")
         aCoder.encode(backgroundColor, forKey: "backgroundColor")
         aCoder.encode(textAlignment, forKey: "textAlignment")
         aCoder.encode(lineBreakMode, forKey: "lineBreakMode")
@@ -311,9 +298,9 @@ open class NSLabel: NSView {
         aCoder.encode(shadowOffset, forKey: "shadowOffset")
         aCoder.encode(preferredMaxLayoutWidth, forKey: "preferredMaxLayoutWidth")
     }
-
+    
     // MARK: - Public methods
-
+    
     override open func draw(_ dirtyRect: NSRect) {
         let bounds = self.bounds
         
@@ -363,12 +350,6 @@ open class NSLabel: NSView {
     private func attributes() -> [NSAttributedString.Key : Any] {
         let shadow = NSShadow()
         
-        var textColor = textColorLight
-        
-        if UserDefaults.standard.string(forKey: "AppleInterfaceStyle") == "Dark" {
-            textColor = textColorDark
-        }
-        
         var backgroundColor = self.backgroundColor
         
         if isHighlighted {
@@ -385,7 +366,7 @@ open class NSLabel: NSView {
         
         return [
             NSAttributedString.Key.font: self.font,
-            NSAttributedString.Key.foregroundColor: textColor,
+            NSAttributedString.Key.foregroundColor: self.textColor,
             NSAttributedString.Key.backgroundColor: backgroundColor,
             NSAttributedString.Key.paragraphStyle: self.drawingParagraphStyle(),
             NSAttributedString.Key.shadow: shadow
@@ -406,11 +387,11 @@ open class NSLabel: NSView {
         let paragraphStyle = NSMutableParagraphStyle()
         
         paragraphStyle.alignment = self.textAlignment
-
+        
         if self.numberOfLines > 1 {
             paragraphStyle.lineBreakMode = self.lineBreakMode
         }
-
+        
         return paragraphStyle
     }
 }

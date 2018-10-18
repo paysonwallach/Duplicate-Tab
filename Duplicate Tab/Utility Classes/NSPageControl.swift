@@ -8,12 +8,15 @@
 
 import Cocoa
 
-protocol NSPageControlDelegate: class {
-    func onClick(_ sender: Int)
-}
-
 class NSPageControl: NSView {
-    var numberOfPages = 0
+    
+    // MARK: - Properties
+    
+    var numberOfPages = 0 {
+        didSet {
+            drawPageControls()
+        }
+    }
     var currentPage = 0 {
         didSet (previousValue) {
             if currentPage < 0 {
@@ -32,12 +35,12 @@ class NSPageControl: NSView {
     var indicatorTintColor: NSColor
     var currentPageIndicatorTintColor: NSColor
     var animationDuration: TimeInterval = 0.04
-    var indicatorRadius: CGFloat = 8.0
-    var indicatorMargin: CGFloat = 12.0
+    var indicatorDiameter: CGFloat = 8.0
+    var indicatorMargin: CGFloat = 2.0
     
     private var indicatorLayers: [CAShapeLayer] = []
     
-    weak var delegate: NSPageControlDelegate?
+    // MARK: - Override methods
     
     override init(frame frameRect: NSRect) {
         let defaultIndicatorTintColor = NSColor.lightGray
@@ -64,29 +67,40 @@ class NSPageControl: NSView {
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
 
-        let indicatorWidthSum = indicatorRadius * CGFloat(numberOfPages)
+        for i in 0..<numberOfPages {
+            let fillColor = (i == currentPage) ? currentPageIndicatorTintColor : indicatorTintColor
+            let shapeLayer = indicatorLayers[i]
+            
+            shapeLayer.fillColor = fillColor.cgColor
+        }
+    }
+    
+    // MARK: - Private Methods
+    
+    private func drawPageControls() {
+        let indicatorWidthSum = indicatorDiameter * CGFloat(numberOfPages)
         let marginWidthSum = indicatorMargin * CGFloat(numberOfPages - 1)
         let minimumWidth = indicatorWidthSum + marginWidthSum
-
+        
+        frame = NSRect(x: 0, y: 0, width: minimumWidth, height: indicatorDiameter)
+        
         indicatorLayers = []
         self.layer = CAShapeLayer()
         self.wantsLayer = true
         
         for i in 0..<numberOfPages {
-            let minX = (dirtyRect.width - minimumWidth) / 2
-            let indexOffset = (indicatorRadius + indicatorMargin) * CGFloat(i)
-            let verticalCenter = (dirtyRect.height - indicatorRadius)
-            let x = minX + indexOffset
-            let y = verticalCenter - indicatorRadius / 2
-            let rect = NSRect(x: x, y: y, width: indicatorRadius, height: indicatorRadius)
-            let cgPath = CGMutablePath()
+            let x = (indicatorDiameter + indicatorMargin) * CGFloat(i)
+            let y = frame.height - indicatorDiameter
+            let rect = NSRect(x: x, y: y, width: indicatorDiameter, height: indicatorDiameter)
+            let path = CGMutablePath()
             
-            cgPath.addEllipse(in: rect)
+            path.addEllipse(in: rect)
             
             let fillColor = (i == currentPage) ? currentPageIndicatorTintColor : indicatorTintColor
             let shapeLayer = CAShapeLayer()
-
-            shapeLayer.path = cgPath
+            
+            shapeLayer.frame = rect
+            shapeLayer.path = path
             shapeLayer.fillColor = fillColor.cgColor
             
             guard let layer = layer else {
@@ -97,35 +111,6 @@ class NSPageControl: NSView {
             indicatorLayers.append(shapeLayer)
         }
     }
-   /*
-    override func mouseUp(with event: NSEvent) {
-        let point = convert(event.locationInWindow, to: self)
-        let pointInView = NSPointToCGPoint(convert(event.locationInWindow, from: nil))
-        guard let layer = layer else {
-            return
-        }
-        
-        let clickedOn = layer.hitTest(layer.convert(pointInView, to: layer.presentation()))
-        
-        guard let presentationLayer = layer.presentation() else {
-            return
-        }
-        
-        let click = presentationLayer.hitTest(point)
-        
-        for (index, layer) in indicatorLayers.enumerated() {
-            guard let presentationLayer = layer.presentation() else {
-                return
-            }
-            
-            let bounds = presentationLayer.bounds
-            
-            if bounds.contains(pointInView) {
-                delegate?.onClick(index)
-            }
-        }
-    }
-    */
     
     private func didSetCurrentPage(_ selectedPage: Int, newlySelectedPage: Int) {
         if selectedPage == newlySelectedPage {
