@@ -18,4 +18,6 @@ Apple apparently doesn't believe in competition, so not only am I distributing D
 
 If you like Duplicate Tab and/or find it useful, tell your friends! After all, there's bound to be at least one who's crazy–I mean cool enough to be a fellow Safari user.
 
-![There are dozens of us!](https://gfycat.com/scarceunluckyhoopoe)
+<p align="center">
+  <img src="https://github.com/paysonwallach/Duplicate-Tab/blob/master/dozens-of-us.gif" alt="There are dozens of us!">
+</p>
