@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		021B6E66217DC29D00FF6B5F /* Logs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021B6E65217DC29D00FF6B5F /* Logs.swift */; };
+		021B6E68217DC2DF00FF6B5F /* Logs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021B6E65217DC29D00FF6B5F /* Logs.swift */; };
+		022BC5442191CF5D00300782 /* SetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022BC5432191CF5D00300782 /* SetupView.swift */; };
 		0239E1F421748AFE007C9F97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0239E1F321748AFE007C9F97 /* AppDelegate.swift */; };
 		0239E1F621748AFF007C9F97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0239E1F521748AFF007C9F97 /* Assets.xcassets */; };
 		0239E20821748B14007C9F97 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0239E20721748B14007C9F97 /* Cocoa.framework */; };
@@ -14,11 +17,12 @@
 		0239E21921748B14007C9F97 /* Duplicate Tab Button.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0239E20521748B14007C9F97 /* Duplicate Tab Button.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0239E22021749F60007C9F97 /* ToolbarItemIcon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 0239E21F21749F60007C9F97 /* ToolbarItemIcon.pdf */; };
 		027764492174D57C00E12C84 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027764482174D57C00E12C84 /* main.swift */; };
-		0277644F2174D85F00E12C84 /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0277644E2174D85F00E12C84 /* SetupViewController.swift */; };
-		027764512174DF6800E12C84 /* SetupPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027764502174DF6800E12C84 /* SetupPageController.swift */; };
-		027764532175D6EF00E12C84 /* NSPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027764522175D6EF00E12C84 /* NSPageControl.swift */; };
 		027764552175F5E500E12C84 /* NSLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027764542175F5E500E12C84 /* NSLabel.swift */; };
-		02C346302178D88000B74E62 /* SetupWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C3462F2178D88000B74E62 /* SetupWindow.swift */; };
+		02C6DD4D2191EEA50080BA76 /* Safari.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C6DD4B2191EEA50080BA76 /* Safari.swift */; };
+		02C6DD4E2191EEA50080BA76 /* SafariScripting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C6DD4C2191EEA50080BA76 /* SafariScripting.swift */; };
+		02D87F09217DF8EB00378429 /* scrollPosition.js in Resources */ = {isa = PBXBuildFile; fileRef = 02D87F08217DF8EB00378429 /* scrollPosition.js */; };
+		02F73E032181EA3400FA9147 /* Stenographer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02F73E022181EA3400FA9147 /* Stenographer.framework */; };
+		02F73E052181F1DD00FA9147 /* Cartography.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02F73E042181F1DD00FA9147 /* Cartography.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +50,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		021B6E65217DC29D00FF6B5F /* Logs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logs.swift; sourceTree = "<group>"; };
+		022BC5432191CF5D00300782 /* SetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SetupView.swift; path = "/Users/paysonwallach/Projects/Duplicate Tab/Duplicate Tab/SetupView.swift"; sourceTree = "<absolute>"; };
 		0239E1F021748AFE007C9F97 /* Duplicate Tab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Duplicate Tab.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0239E1F321748AFE007C9F97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0239E1F521748AFF007C9F97 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -58,11 +64,12 @@
 		0239E21621748B14007C9F97 /* Duplicate_Tab_Button.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Duplicate_Tab_Button.entitlements; sourceTree = "<group>"; };
 		0239E21F21749F60007C9F97 /* ToolbarItemIcon.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ToolbarItemIcon.pdf; sourceTree = "<group>"; };
 		027764482174D57C00E12C84 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		0277644E2174D85F00E12C84 /* SetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
-		027764502174DF6800E12C84 /* SetupPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupPageController.swift; sourceTree = "<group>"; };
-		027764522175D6EF00E12C84 /* NSPageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSPageControl.swift; sourceTree = "<group>"; };
 		027764542175F5E500E12C84 /* NSLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSLabel.swift; sourceTree = "<group>"; };
-		02C3462F2178D88000B74E62 /* SetupWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupWindow.swift; sourceTree = "<group>"; };
+		02C6DD4B2191EEA50080BA76 /* Safari.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Safari.swift; sourceTree = "<group>"; };
+		02C6DD4C2191EEA50080BA76 /* SafariScripting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SafariScripting.swift; sourceTree = "<group>"; };
+		02D87F08217DF8EB00378429 /* scrollPosition.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = scrollPosition.js; sourceTree = "<group>"; };
+		02F73E022181EA3400FA9147 /* Stenographer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Stenographer.framework; path = Frameworks/Stenographer.framework; sourceTree = "<group>"; };
+		02F73E042181F1DD00FA9147 /* Cartography.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cartography.framework; path = Carthage/Build/Mac/Cartography.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +77,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02F73E052181F1DD00FA9147 /* Cartography.framework in Frameworks */,
+				02F73E032181EA3400FA9147 /* Stenographer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,18 +93,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0217E336217766730008D0D0 /* Utility Classes */ = {
+		0217E336217766730008D0D0 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				02C6DD4B2191EEA50080BA76 /* Safari.swift */,
+				02C6DD4C2191EEA50080BA76 /* SafariScripting.swift */,
 				027764542175F5E500E12C84 /* NSLabel.swift */,
-				027764522175D6EF00E12C84 /* NSPageControl.swift */,
 			);
-			path = "Utility Classes";
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		021B6E67217DC2D700FF6B5F /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				021B6E65217DC29D00FF6B5F /* Logs.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 		0239E1E721748AFD007C9F97 = {
 			isa = PBXGroup;
 			children = (
+				021B6E67217DC2D700FF6B5F /* Shared */,
 				0239E1F221748AFE007C9F97 /* Duplicate Tab */,
 				0239E20921748B14007C9F97 /* Duplicate Tab Button */,
 				0239E20621748B14007C9F97 /* Frameworks */,
@@ -116,11 +135,9 @@
 			isa = PBXGroup;
 			children = (
 				0239E1F321748AFE007C9F97 /* AppDelegate.swift */,
-				02C3462F2178D88000B74E62 /* SetupWindow.swift */,
-				027764502174DF6800E12C84 /* SetupPageController.swift */,
-				0277644E2174D85F00E12C84 /* SetupViewController.swift */,
+				022BC5432191CF5D00300782 /* SetupView.swift */,
 				027764482174D57C00E12C84 /* main.swift */,
-				0217E336217766730008D0D0 /* Utility Classes */,
+				0217E336217766730008D0D0 /* Utilities */,
 				0239E1F521748AFF007C9F97 /* Assets.xcassets */,
 				0239E1FA21748AFF007C9F97 /* Info.plist */,
 				0239E1FB21748AFF007C9F97 /* Duplicate_Tab.entitlements */,
@@ -131,7 +148,9 @@
 		0239E20621748B14007C9F97 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				02F73E042181F1DD00FA9147 /* Cartography.framework */,
 				0239E20721748B14007C9F97 /* Cocoa.framework */,
+				02F73E022181EA3400FA9147 /* Stenographer.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -140,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				0239E20A21748B14007C9F97 /* SafariExtensionHandler.swift */,
+				02D87F08217DF8EB00378429 /* scrollPosition.js */,
 				0239E21121748B14007C9F97 /* Info.plist */,
 				0239E21F21749F60007C9F97 /* ToolbarItemIcon.pdf */,
 				0239E21621748B14007C9F97 /* Duplicate_Tab_Button.entitlements */,
@@ -159,6 +179,7 @@
 				0239E1EE21748AFE007C9F97 /* Resources */,
 				0239E21D21748B14007C9F97 /* Embed App Extensions */,
 				02776456217610CE00E12C84 /* ShellScript */,
+				0211E21F217F1A7C007CC4D7 /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
@@ -208,11 +229,16 @@
 					};
 					0239E20421748B14007C9F97 = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.HardenedRuntime = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
 			buildConfigurationList = 0239E1EB21748AFD007C9F97 /* Build configuration list for PBXProject "Duplicate Tab" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -243,6 +269,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02D87F09217DF8EB00378429 /* scrollPosition.js in Resources */,
 				0239E22021749F60007C9F97 /* ToolbarItemIcon.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -250,6 +277,30 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0211E21F217F1A7C007CC4D7 /* Copy Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/Mac/Sparkle.framework",
+				"$(SRCROOT)/Carthage/Build/Mac/Stenographer.framework",
+				"$(SRCROOT)/Carthage/Build/Mac/Cartography.framework",
+			);
+			name = "Copy Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Sparkle.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Stenographer.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Cartography.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
 		02776456217610CE00E12C84 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -292,12 +343,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				027764552175F5E500E12C84 /* NSLabel.swift in Sources */,
-				027764512174DF6800E12C84 /* SetupPageController.swift in Sources */,
-				0277644F2174D85F00E12C84 /* SetupViewController.swift in Sources */,
+				02C6DD4E2191EEA50080BA76 /* SafariScripting.swift in Sources */,
+				021B6E66217DC29D00FF6B5F /* Logs.swift in Sources */,
 				027764492174D57C00E12C84 /* main.swift in Sources */,
-				02C346302178D88000B74E62 /* SetupWindow.swift in Sources */,
-				027764532175D6EF00E12C84 /* NSPageControl.swift in Sources */,
+				022BC5442191CF5D00300782 /* SetupView.swift in Sources */,
 				0239E1F421748AFE007C9F97 /* AppDelegate.swift in Sources */,
+				02C6DD4D2191EEA50080BA76 /* Safari.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +356,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				021B6E68217DC2DF00FF6B5F /* Logs.swift in Sources */,
 				0239E20B21748B14007C9F97 /* SafariExtensionHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -357,6 +409,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				"FRAMEWORK_SEARCH_PATHS[sdk=macosx*]" = "$(SRCROOT)";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -418,6 +471,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				"FRAMEWORK_SEARCH_PATHS[sdk=macosx*]" = "$(SRCROOT)";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -445,6 +499,11 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = GQRYYNPEU3;
 				ENABLE_HARDENED_RUNTIME = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = "Duplicate Tab/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -467,6 +526,11 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = GQRYYNPEU3;
 				ENABLE_HARDENED_RUNTIME = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = "Duplicate Tab/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -485,6 +549,11 @@
 				CODE_SIGN_ENTITLEMENTS = "Duplicate Tab Button/Duplicate_Tab_Button.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GQRYYNPEU3;
+				ENABLE_HARDENED_RUNTIME = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = "Duplicate Tab Button/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -504,6 +573,11 @@
 				CODE_SIGN_ENTITLEMENTS = "Duplicate Tab Button/Duplicate_Tab_Button.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GQRYYNPEU3;
+				ENABLE_HARDENED_RUNTIME = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = "Duplicate Tab Button/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

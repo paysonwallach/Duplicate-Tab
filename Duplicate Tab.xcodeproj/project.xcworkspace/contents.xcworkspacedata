@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Duplicate Tab.xcodeproj">
+      location = "group:/Users/paysonwallach/Projects/Duplicate Tab/Duplicate Tab/SetupView.swift">
+   </FileRef>
+   <FileRef
+      location = "self:">
    </FileRef>
 </Workspace>
