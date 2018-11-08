@@ -1,16 +1,16 @@
 # Duplicate Tab
 
-Safari is my browser of choice (I know), on macOS. It's fast, native, beautifully designed, and doesn't devour RAM (Looking at you, Google Chrome). For all its positives though, Safari has one feature that is glaringly missing, a core feature in all other modern browsers (even Opera)... the ability to duplicate a page in a new tab.
+Safari is my browser of choice on macOS. It's fast, native, beautifully designed, and doesn't devour RAM (Looking at you, Google Chrome). For all of its positives though, Safari has one feature that is glaringly missing, a core feature in all other modern browsers (even Opera)... the ability to duplicate a page in a new tab.
 
 ### Installation
 
-You can either clone this repository and build a release build yourself with Xcode, or [download a notarized copy](https://fourpeaksstudios.io/duplicate-tab) with updates built-in.
+You can either clone this repository and build it yourself with Xcode, or [download a notarized copy](https://fourpeaksstudios.io/duplicate-tab) with updates built-in.
 
 ### FAQ
 
 #### Surely there's already an app in the App Store that does this?
 
-There is, but its icon is atrocious, and more importantly it doesn't recreate the page state (Such as scroll position) in the new tab. Duplicate Tab fixes both these issues.
+There is, but its icon is atrocious, and more importantly it doesn't recreate page state (i.e. scroll position) in the new tab. Duplicate Tab fixes both these issues.
 
 #### Why isn't Duplicate Tab in the App Store?
 
