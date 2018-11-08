@@ -26,7 +26,8 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
                     guard let window = window else {
                         return
                     }
-                    
+
+                    UserDefaults.standard.set(true, forKey: "isDuplicatePage")
                     window.openTab(with: url, makeActiveIfPossible: true) { _ in
                         return
                     }
@@ -34,29 +35,36 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
             })
         }
     }
+
     override func messageReceived(withName messageName: String, from page: SFSafariPage, userInfo: [String : Any]? = nil) {
         if messageName == "updateScrollPosition" {
             UserDefaults.standard.set(userInfo, forKey: "scrollPosition")
-        } else if let scrollPosition = UserDefaults.standard.object(forKey: "scrollPosition") as? [String : Any] {
+        } else if UserDefaults.standard.bool(forKey: "isDuplicatePage") {
+            guard let scrollPosition = UserDefaults.standard.object(forKey: "scrollPosition") as? [String : Any] else {
+                Logs.shared.error("Unable to get reference to scroll position")
+                return
+            }
+
             page.dispatchMessageToScript(withName: "setScrollPositions", userInfo: scrollPosition)
-        } else {
-            Logs.shared.error("Unable to get reference to scroll position")
+            Logs.shared.info("Setting scroll position")
+            UserDefaults.standard.set(false, forKey: "isDuplicatePage")
         }
     }
-    
+
     override func toolbarItemClicked(in window: SFSafariWindow) {
         getURL(in: window) { url in
             guard let url = url else {
                 Logs.shared.error("Unable to get reference to url")
                 return
             }
-            
+
+            UserDefaults.standard.set(true, forKey: "isDuplicatePage")
             window.openTab(with: url, makeActiveIfPossible: true) { _ in
                 return
             }
         }
     }
-    
+
     override func validateToolbarItem(in window: SFSafariWindow, validationHandler: @escaping (Bool, String) -> Void) {
         getURL(in: window) { url in
             if url == nil {
@@ -66,7 +74,7 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
             }
         }
     }
-    
+
     override func validateContextMenuItem(withCommand command: String, in page: SFSafariPage, userInfo: [String : Any]? = nil, validationHandler: @escaping (Bool, String?) -> Void) {
         page.getPropertiesWithCompletionHandler { properties in
             guard let properties = properties else {
@@ -80,7 +88,7 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
             }
         }
     }
-    
+
     private func getURL(in window: SFSafariWindow, completionHandler: @escaping (URL?) -> Void) {
         window.getActiveTab { tab in
             guard let tab = tab else {
