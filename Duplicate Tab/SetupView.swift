@@ -8,7 +8,7 @@
 
 import Cocoa
 import Cartography
-import ScriptingBridge
+import SafariServices
 
 class SetupView: NSWindow {
     let screenshotWidth: CGFloat = 300
@@ -83,10 +83,8 @@ class SetupView: NSWindow {
     }
 
     @objc func showExtensionsPreferences() {
-        let bundleIdentifier = Bundle.main.object(forInfoDictionaryKey: "CFBundleIdentifier") as! String
-        let safari = SBApplication(bundleIdentifier: "com.apple.Safari")! as SafariApplication
+        let extensionBundleIdentifier = Bundle.main.object(forInfoDictionaryKey: "Extension bundle identifier") as! String
 
-        safari.showExtensionsPreferences!(bundleIdentifier)
-        NSWorkspace.shared.launchApplication("Safari")
+        SFSafariApplication.showPreferencesForExtension(withIdentifier: extensionBundleIdentifier, completionHandler: nil)
     }
 }
