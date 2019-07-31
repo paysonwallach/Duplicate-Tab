@@ -448,6 +448,7 @@
 				DEVELOPMENT_TEAM = GQRYYNPEU3;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "Duplicate Tab/Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.paysonwallach.Duplicate-Tab";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -465,6 +466,7 @@
 				DEVELOPMENT_TEAM = GQRYYNPEU3;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "Duplicate Tab/Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.paysonwallach.Duplicate-Tab";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -478,11 +480,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GQRYYNPEU3;
 				INFOPLIST_FILE = "Duplicate Tab Button/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@executable_path/../../../../Frameworks",
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.paysonwallach.Duplicate-Tab.Duplicate-Tab-Button";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -497,11 +494,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GQRYYNPEU3;
 				INFOPLIST_FILE = "Duplicate Tab Button/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@executable_path/../../../../Frameworks",
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.paysonwallach.Duplicate-Tab.Duplicate-Tab-Button";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
