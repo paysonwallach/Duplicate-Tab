@@ -294,10 +294,6 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = GQRYYNPEU3;
 				INFOPLIST_FILE = "Duplicate Tab/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.paysonwallach.Duplicate-Tab";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -313,10 +309,6 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = GQRYYNPEU3;
 				INFOPLIST_FILE = "Duplicate Tab/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.paysonwallach.Duplicate-Tab";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
