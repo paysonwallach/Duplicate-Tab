@@ -29,8 +29,8 @@ class NSPageControl: NSView {
     }
 
     var hideForSinglePage = true
-    var indicatorTintColor = NSColor.pageIndicator!
-    var currentPageIndicatorTintColor = NSColor.currentPageIndicator!
+    var indicatorTintColor: NSColor
+    var currentPageIndicatorTintColor: NSColor
     var animationDuration: TimeInterval = 0.04
     var indicatorRadius: CGFloat = 8.0
     var indicatorMargin: CGFloat = 12.0
@@ -38,6 +38,28 @@ class NSPageControl: NSView {
     private var indicatorLayers: [CAShapeLayer] = []
 
     weak var delegate: NSPageControlDelegate?
+
+    override init(frame frameRect: NSRect) {
+        let defaultIndicatorTintColor = NSColor.lightGray
+        let defaultCurrentPageIndicatorTintColor = NSColor.darkGray
+
+        if #available (OSX 10.13, *) {
+            indicatorTintColor = NSColor(named: "pageIndicator") ?? defaultIndicatorTintColor
+            currentPageIndicatorTintColor = NSColor(named: "currentPageIndicator") ?? defaultCurrentPageIndicatorTintColor
+        } else {
+            indicatorTintColor = defaultCurrentPageIndicatorTintColor
+            currentPageIndicatorTintColor = defaultCurrentPageIndicatorTintColor
+        }
+
+        super.init(frame: frameRect)
+    }
+
+    required init?(coder decoder: NSCoder) {
+        indicatorTintColor = decoder.decodeObject(forKey: "indicatorTintColor") as! NSColor
+        currentPageIndicatorTintColor = decoder.decodeObject(forKey: "currentPageIndicatorTintColor") as! NSColor
+
+        super.init(coder: decoder)
+    }
 
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
