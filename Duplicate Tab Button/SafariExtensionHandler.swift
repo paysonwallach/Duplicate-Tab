@@ -27,6 +27,7 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
                         return
                     }
 
+                    UserDefaults.standard.set(true, forKey: "isDuplicatePage")
                     window.openTab(with: url, makeActiveIfPossible: true) { _ in
                         return
                     }
@@ -34,13 +35,19 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
             })
         }
     }
+
     override func messageReceived(withName messageName: String, from page: SFSafariPage, userInfo: [String : Any]? = nil) {
         if messageName == "updateScrollPosition" {
             UserDefaults.standard.set(userInfo, forKey: "scrollPosition")
-        } else if let scrollPosition = UserDefaults.standard.object(forKey: "scrollPosition") as? [String : Any] {
+        } else if UserDefaults.standard.bool(forKey: "isDuplicatePage") {
+            guard let scrollPosition = UserDefaults.standard.object(forKey: "scrollPosition") as? [String : Any] else {
+                Logs.shared.error("Unable to get reference to scroll position")
+                return
+            }
+
             page.dispatchMessageToScript(withName: "setScrollPositions", userInfo: scrollPosition)
-        } else {
-            Logs.shared.error("Unable to get reference to scroll position")
+            Logs.shared.info("Setting scroll position")
+            UserDefaults.standard.set(false, forKey: "isDuplicatePage")
         }
     }
 
@@ -51,6 +58,7 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
                 return
             }
 
+            UserDefaults.standard.set(true, forKey: "isDuplicatePage")
             window.openTab(with: url, makeActiveIfPossible: true) { _ in
                 return
             }
