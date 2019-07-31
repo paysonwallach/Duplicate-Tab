@@ -46,7 +46,7 @@ open class NSLabel: NSView {
      This property is nil by default. Assigning a new value to this property also replaces the value of the attributedText property with the same text without any inherent style attributes, instead the label styles the new string using shadowColor, textAlignment, and other style-related properties of the class.
      */
     @IBInspectable
-    public var text: String? {
+    public var text: NSString? {
         didSet {
             self.invalidateIntrinsicContentSize()
             self.setNeedsDisplay(drawingRect)
@@ -79,7 +79,7 @@ open class NSLabel: NSView {
 
      If you are not using styled text, this property applies to the entire text string in the text property.
 
-     The default value for this property is a black color (set through the black class property of UIColor).
+     The default value for this property is the default text color for the system appearance state (set through the textColor class property of NSColor).
      */
     @IBInspectable
     public var textColor: NSColor
@@ -209,14 +209,14 @@ open class NSLabel: NSView {
         self.adjustsFontSizeToFitWidth = false
         self.minimumScaleFactor = 0
         self.isHighlighted = false
-        self.shadowOffset = CGSize(width: 0, height: -1)
+        self.shadowOffset = CGSize(width: 0, height: 0)
         self.preferredMaxLayoutWidth = 0
 
         super.init(frame: frameRect)
     }
 
     required public init?(coder decoder: NSCoder) {
-        if let text = decoder.decodeObject(forKey: "font") as? String {
+        if let text = decoder.decodeObject(forKey: "font") as? NSString {
             self.text = text
         }
 
@@ -312,9 +312,9 @@ open class NSLabel: NSView {
         dirtyRect.fill(using: NSCompositingOperation.destinationOver)
 
         if let text = self.text {
-            text.draw(with: drawRect, options: self.drawingOptions(), attributes: self.attributes())
+            text.draw(with: drawRect, options: .usesLineFragmentOrigin, attributes: self.attributes())
         } else if let attributedText = self.attributedText {
-            attributedText.draw(with: drawRect, options: self.drawingOptions())
+            attributedText.draw(with: drawRect, options: .usesLineFragmentOrigin)
         }
     }
 
@@ -330,11 +330,11 @@ open class NSLabel: NSView {
             let size = NSMakeSize(self.preferredMaxLayoutWidth, 0)
 
             if let text = self.text {
-                self.drawingRect = text.boundingRect(with: size, options: self.drawingOptions(),
+                self.drawingRect = text.boundingRect(with: size, options: .usesLineFragmentOrigin,
                                                      attributes: attributes())
             } else if let attributedText = self.attributedText {
                 self.drawingRect = attributedText.boundingRect(with: size,
-                                                               options: self.drawingOptions())
+                                                               options: .usesLineFragmentOrigin)
             }
 
             drawingRect.origin.x = ceil(drawingRect.origin.x)
@@ -371,16 +371,6 @@ open class NSLabel: NSView {
             NSAttributedString.Key.paragraphStyle: self.drawingParagraphStyle(),
             NSAttributedString.Key.shadow: shadow
         ]
-    }
-
-    private func drawingOptions() -> NSString.DrawingOptions {
-        var options: NSString.DrawingOptions = .usesFontLeading
-
-        if numberOfLines != 0 {
-            options.insert(.usesLineFragmentOrigin)
-        }
-
-        return options
     }
 
     private func drawingParagraphStyle() -> NSParagraphStyle {
