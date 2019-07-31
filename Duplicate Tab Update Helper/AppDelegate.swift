@@ -9,7 +9,6 @@
 import Cocoa
 import Sparkle
 
-@NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     // MARK: - Properties

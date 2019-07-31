@@ -255,7 +255,8 @@
 				02DB82D022EF31DE0077D012 /* Sources */,
 				02DB82D122EF31DE0077D012 /* Frameworks */,
 				02DB82D222EF31DE0077D012 /* Resources */,
-				02996DF522F29C5100EA59AD /* Set Build Number */,
+				020096B422F0CFB7005A15D6 /* Sign Sparkle */,
+				0215DF4E22EF5EC300D0EC94 /* Set Build Number */,
 			);
 			buildRules = (
 			);
@@ -599,7 +600,6 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/**",
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
 				"FRAMEWORK_SEARCH_PATHS[sdk=macosx*]" = (
@@ -626,7 +626,6 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/**",
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
 				"FRAMEWORK_SEARCH_PATHS[sdk=macosx*]" = (
@@ -652,6 +651,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
+				"FRAMEWORK_SEARCH_PATHS[sdk=macosx*]" = (
+					"$(SRCROOT)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = "Duplicate Tab Button/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.paysonwallach.Duplicate-Tab.Duplicate-Tab-Button";
@@ -670,6 +673,10 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				"FRAMEWORK_SEARCH_PATHS[sdk=macosx*]" = (
+					"$(SRCROOT)",
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
 				INFOPLIST_FILE = "Duplicate Tab Button/Info.plist";
@@ -695,7 +702,7 @@
 				);
 				INFOPLIST_FILE = "Duplicate Tab Update Helper/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.paysonwallach.Duplicate-Tab.Duplicate-Tab-Update-Helper";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -714,12 +721,13 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
-				INFOPLIST_FILE = "Duplicate Tab Update Helper/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
+				"FRAMEWORK_SEARCH_PATHS[sdk=macosx*]" = (
+					"$(SRCROOT)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				INFOPLIST_FILE = "Duplicate Tab Update Helper/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.paysonwallach.Duplicate-Tab.Duplicate-Tab-Update-Helper";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
