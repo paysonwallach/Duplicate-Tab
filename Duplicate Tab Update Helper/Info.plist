@@ -2,14 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>UpdateHelperName</key>
-	<string></string>
-	<key>UpdateHelperBundleIdentifier</key>
-	<string>com.paysonwallach.Duplicate-Tab.Duplicate-Tab-Update-Helper</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
-	<key>CFBundleDisplayName</key>
-	<string></string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIconFile</key>
@@ -26,11 +20,17 @@
 	<string>1.2</string>
 	<key>CFBundleVersion</key>
 	<string>See 'Set Build Number' Build Phase</string>
+	<key>LSApplicationCategoryType</key>
+	<string>public.app-category.utilities</string>
 	<key>LSMinimumSystemVersion</key>
 	<string>$(MACOSX_DEPLOYMENT_TARGET)</string>
 	<key>NSHumanReadableCopyright</key>
-	<string>Copyright © 2018 Payson Wallach. All rights reserved.</string>
+	<string>Copyright © 2019 Payson Wallach. All rights reserved.</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
+	<key>SUEnableAutomaticChecks</key>
+	<true/>
+	<key>SUFeedURL</key>
+	<string>https://fourpeaksstudios.io/duplicate-tab/appcast.xml</string>
 </dict>
 </plist>

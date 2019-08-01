@@ -7,12 +7,18 @@
 //
 
 import Cocoa
+import ServiceManagement
 
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     // MARK: - Properties
 
-    let applicationName = Bundle.main.object(forInfoDictionaryKey: "CFBundleName") as! String
+    static let hasBeenLaunchedBeforeKeyPath = "HasBeenLaunchedBefore"
+
+    let applicationName = Bundle.main.object(
+        forInfoDictionaryKey: "CFBundleName") as! String
+    let updateHelperBundleIdentifier = Bundle.main.object(
+        forInfoDictionaryKey: "UpdateHelperBundleIdentifier") as! String
 
     var setupView: NSWindow!
 
@@ -48,13 +54,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
+        if UserDefaults.isFirstLaunch() {
+            SMLoginItemSetEnabled(updateHelperBundleIdentifier as CFString,
+                                  true)
+        }
 
-        setupView = SetupView()
+        launchUpdateHelper()
 
-        setupView.center()
-        setupView.makeKeyAndOrderFront(NSApp)
-
-        NSApp.activate(ignoringOtherApps: true)
+        presentSetupView()
     }
 
     func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
@@ -133,5 +140,34 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         menu.addItem(withTitle: title,
                      action: #selector(NSApplication.showHelp(_:)),
                      keyEquivalent: "?")
+    }
+
+    // MARK: - SetupView
+
+    func presentSetupView() {
+        setupView = SetupView()
+
+        setupView.center()
+        setupView.makeKeyAndOrderFront(NSApp)
+
+        NSApp.activate(ignoringOtherApps: true)
+    }
+
+    // MARK: - Update Helper
+
+    func launchUpdateHelper() {
+        let updateHelperIsNotRunning =
+            NSWorkspace.shared.runningApplications.filter {
+                $0.bundleIdentifier == updateHelperBundleIdentifier
+            }.isEmpty
+
+        if updateHelperIsNotRunning {
+            NSWorkspace.shared.launchApplication(
+                withBundleIdentifier: updateHelperBundleIdentifier,
+                options: [],
+                additionalEventParamDescriptor: nil,
+                launchIdentifier: nil
+            )
+        }
     }
 }
