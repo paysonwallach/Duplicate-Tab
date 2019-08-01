@@ -19,14 +19,14 @@
 		0239E22021749F60007C9F97 /* ToolbarItemIcon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 0239E21F21749F60007C9F97 /* ToolbarItemIcon.pdf */; };
 		027764492174D57C00E12C84 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027764482174D57C00E12C84 /* main.swift */; };
 		027764552175F5E500E12C84 /* NSLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027764542175F5E500E12C84 /* NSLabel.swift */; };
+		02996E0322F2A60B00EA59AD /* SetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02996E0222F2A60A00EA59AD /* SetupView.swift */; };
+		02996E1122F2A81B00EA59AD /* Duplicate Tab Update Helper.app in Embed Update Helper */ = {isa = PBXBuildFile; fileRef = 02DB82D422EF31DE0077D012 /* Duplicate Tab Update Helper.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		02BF215922EF23AB0045C731 /* Stenographer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02BF215322EF21E50045C731 /* Stenographer.framework */; };
 		02BF215A22EF23CB0045C731 /* Stenographer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02BF215322EF21E50045C731 /* Stenographer.framework */; };
-		02BF215C22EF241A0045C731 /* SetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BF215B22EF241A0045C731 /* SetupView.swift */; };
 		02C6DD4D2191EEA50080BA76 /* Safari.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C6DD4B2191EEA50080BA76 /* Safari.swift */; };
 		02C6DD4E2191EEA50080BA76 /* SafariScripting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C6DD4C2191EEA50080BA76 /* SafariScripting.swift */; };
 		02D87F09217DF8EB00378429 /* scrollPosition.js in Resources */ = {isa = PBXBuildFile; fileRef = 02D87F08217DF8EB00378429 /* scrollPosition.js */; };
 		02DB82CB22EF25BA0077D012 /* Cartography.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02DB82CA22EF25BA0077D012 /* Cartography.framework */; };
-		02DB82CE22EF28CF0077D012 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 02DB82CC22EF28CF0077D012 /* Cartfile */; };
 		02DB82D722EF31DE0077D012 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DB82D622EF31DE0077D012 /* AppDelegate.swift */; };
 		02DB82E522EF32D90077D012 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DB82E422EF32D90077D012 /* main.swift */; };
 /* End PBXBuildFile section */
@@ -38,6 +38,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 0239E20421748B14007C9F97;
 			remoteInfo = "Duplicate Tab Button";
+		};
+		02996E0822F2A78000EA59AD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0239E1E821748AFD007C9F97 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 02DB82D322EF31DE0077D012;
+			remoteInfo = "Duplicate Tab Update Helper";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -51,6 +58,17 @@
 				0239E21921748B14007C9F97 /* Duplicate Tab Button.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		02996E1022F2A80D00EA59AD /* Embed Update Helper */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LoginItems;
+			dstSubfolderSpec = 1;
+			files = (
+				02996E1122F2A81B00EA59AD /* Duplicate Tab Update Helper.app in Embed Update Helper */,
+			);
+			name = "Embed Update Helper";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -72,13 +90,12 @@
 		0239E21F21749F60007C9F97 /* ToolbarItemIcon.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ToolbarItemIcon.pdf; sourceTree = "<group>"; };
 		027764482174D57C00E12C84 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		027764542175F5E500E12C84 /* NSLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSLabel.swift; sourceTree = "<group>"; };
+		02996E0222F2A60A00EA59AD /* SetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SetupView.swift; path = "/Volumes/Data/Users/paysonwallach/Projects/Duplicate Tab/Duplicate Tab/Duplicate Tab/SetupView.swift"; sourceTree = "<absolute>"; };
 		02BF215322EF21E50045C731 /* Stenographer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Stenographer.framework; path = Carthage/Build/Mac/Stenographer.framework; sourceTree = "<group>"; };
-		02BF215B22EF241A0045C731 /* SetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SetupView.swift; path = "/Volumes/Data/Users/paysonwallach/Projects/Duplicate Tab/Duplicate Tab/SetupView.swift"; sourceTree = "<absolute>"; };
 		02C6DD4B2191EEA50080BA76 /* Safari.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Safari.swift; sourceTree = "<group>"; };
 		02C6DD4C2191EEA50080BA76 /* SafariScripting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SafariScripting.swift; sourceTree = "<group>"; };
 		02D87F08217DF8EB00378429 /* scrollPosition.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = scrollPosition.js; sourceTree = "<group>"; };
 		02DB82CA22EF25BA0077D012 /* Cartography.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cartography.framework; path = Carthage/Build/Mac/Cartography.framework; sourceTree = "<group>"; };
-		02DB82CC22EF28CF0077D012 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		02DB82D422EF31DE0077D012 /* Duplicate Tab Update Helper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Duplicate Tab Update Helper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		02DB82D622EF31DE0077D012 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		02DB82DF22EF31DF0077D012 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -138,7 +155,6 @@
 		0239E1E721748AFD007C9F97 = {
 			isa = PBXGroup;
 			children = (
-				02DB82CC22EF28CF0077D012 /* Cartfile */,
 				021B6E67217DC2D700FF6B5F /* Shared */,
 				0239E1F221748AFE007C9F97 /* Duplicate Tab */,
 				0239E20921748B14007C9F97 /* Duplicate Tab Button */,
@@ -162,7 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				0239E1F321748AFE007C9F97 /* AppDelegate.swift */,
-				02BF215B22EF241A0045C731 /* SetupView.swift */,
+				02996E0222F2A60A00EA59AD /* SetupView.swift */,
 				027764482174D57C00E12C84 /* main.swift */,
 				0217E336217766730008D0D0 /* Utilities */,
 				0239E1F521748AFF007C9F97 /* Assets.xcassets */,
@@ -216,14 +232,16 @@
 				0239E1EC21748AFE007C9F97 /* Sources */,
 				0239E1ED21748AFE007C9F97 /* Frameworks */,
 				0239E1EE21748AFE007C9F97 /* Resources */,
-				0239E21D21748B14007C9F97 /* Embed App Extensions */,
 				0211E21F217F1A7C007CC4D7 /* Copy Frameworks */,
+				0239E21D21748B14007C9F97 /* Embed App Extensions */,
+				02996E1022F2A80D00EA59AD /* Embed Update Helper */,
 				02996DF222F251D400EA59AD /* Set Build Number */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				0239E21821748B14007C9F97 /* PBXTargetDependency */,
+				02996E0922F2A78000EA59AD /* PBXTargetDependency */,
 			);
 			name = "Duplicate Tab";
 			productName = "Duplicate Tab";
@@ -236,6 +254,7 @@
 			buildPhases = (
 				0239E20121748B14007C9F97 /* Sources */,
 				0239E20221748B14007C9F97 /* Frameworks */,
+				02996E0422F2A69C00EA59AD /* Copy Frameworks */,
 				0239E20321748B14007C9F97 /* Resources */,
 				02996DF422F25D4700EA59AD /* Set Build Number */,
 			);
@@ -254,9 +273,10 @@
 			buildPhases = (
 				02DB82D022EF31DE0077D012 /* Sources */,
 				02DB82D122EF31DE0077D012 /* Frameworks */,
+				02996E0622F2A6F300EA59AD /* Copy Frameworks */,
 				02DB82D222EF31DE0077D012 /* Resources */,
-				020096B422F0CFB7005A15D6 /* Sign Sparkle */,
-				0215DF4E22EF5EC300D0EC94 /* Set Build Number */,
+				02996E1222F2A92A00EA59AD /* Sign Sparkle */,
+				02996E0522F2A6DC00EA59AD /* Set Build Number */,
 			);
 			buildRules = (
 			);
@@ -324,7 +344,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02DB82CE22EF28CF0077D012 /* Cartfile in Resources */,
 				0239E1F621748AFF007C9F97 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -406,7 +425,27 @@
 			shellPath = /bin/sh;
 			shellScript = "git=`sh /etc/profile; which git`\nappBuild=`\"$git\" rev-list HEAD --count`\nif [ $CONFIGURATION = \"Debug\" ]; then\nbranchName=`\"$git\" rev-parse --abbrev-ref HEAD`\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $appBuild-$branchName\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $appBuild-$branchName\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}.dSYM/Contents/Info.plist\"\nelse\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $appBuild\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $appBuild\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}.dSYM/Contents/Info.plist\"\nfi\necho \"Incremented the build number ${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\n";
 		};
-		02996DF522F29C5100EA59AD /* Set Build Number */ = {
+		02996E0422F2A69C00EA59AD /* Copy Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/Mac/Stenographer.framework",
+			);
+			name = "Copy Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Stenographer.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n\n";
+		};
+		02996E0522F2A6DC00EA59AD /* Set Build Number */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -424,6 +463,44 @@
 			shellPath = /bin/sh;
 			shellScript = "git=`sh /etc/profile; which git`\nappBuild=`\"$git\" rev-list HEAD --count`\nif [ $CONFIGURATION = \"Debug\" ]; then\nbranchName=`\"$git\" rev-parse --abbrev-ref HEAD`\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $appBuild-$branchName\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $appBuild-$branchName\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}.dSYM/Contents/Info.plist\"\nelse\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $appBuild\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $appBuild\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}.dSYM/Contents/Info.plist\"\nfi\necho \"Incremented the build number ${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\n";
 		};
+		02996E0622F2A6F300EA59AD /* Copy Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/Mac/Sparkle.framework",
+			);
+			name = "Copy Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Sparkle.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n\n";
+		};
+		02996E1222F2A92A00EA59AD /* Sign Sparkle */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Sign Sparkle";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "codesign --verbose --force --deep -o runtime \\\n--sign \"${EXPANDED_CODE_SIGN_IDENTITY_NAME}\" \\\n\"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Contents/Frameworks/Sparkle.framework/Versions/A/Resources/AutoUpdate.app\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -435,7 +512,7 @@
 				027764552175F5E500E12C84 /* NSLabel.swift in Sources */,
 				02C6DD4E2191EEA50080BA76 /* SafariScripting.swift in Sources */,
 				021B6E66217DC29D00FF6B5F /* Logs.swift in Sources */,
-				02BF215C22EF241A0045C731 /* SetupView.swift in Sources */,
+				02996E0322F2A60B00EA59AD /* SetupView.swift in Sources */,
 				027764492174D57C00E12C84 /* main.swift in Sources */,
 				0239E1F421748AFE007C9F97 /* AppDelegate.swift in Sources */,
 				02C6DD4D2191EEA50080BA76 /* Safari.swift in Sources */,
@@ -467,6 +544,11 @@
 			isa = PBXTargetDependency;
 			target = 0239E20421748B14007C9F97 /* Duplicate Tab Button */;
 			targetProxy = 0239E21721748B14007C9F97 /* PBXContainerItemProxy */;
+		};
+		02996E0922F2A78000EA59AD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 02DB82D322EF31DE0077D012 /* Duplicate Tab Update Helper */;
+			targetProxy = 02996E0822F2A78000EA59AD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -693,9 +775,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Duplicate Tab Update Helper/Duplicate_Tab_Update_Helper.entitlements";
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = GQRYYNPEU3;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
@@ -705,6 +788,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.paysonwallach.Duplicate-Tab.Duplicate-Tab-Update-Helper";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -714,9 +798,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Duplicate Tab Update Helper/Duplicate_Tab_Update_Helper.entitlements";
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = GQRYYNPEU3;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
@@ -730,6 +815,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.paysonwallach.Duplicate-Tab.Duplicate-Tab-Update-Helper";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
