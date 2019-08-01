@@ -12,32 +12,19 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     // MARK: - Properties
 
-    lazy var applicationName = Bundle.main.object(forInfoDictionaryKey:"CFBundleName") as! String
-    lazy var window = NSWindow()
+    let applicationName = Bundle.main.object(forInfoDictionaryKey: "CFBundleName") as! String
+
+    var setupView: NSWindow!
 
     // MARK: - Class Methods
 
     func applicationWillFinishLaunching(_ notification: Notification) {
-        populateMainMenu()
-    }
-
-    func applicationDidFinishLaunching(_ aNotification: Notification) {
-        window = SetupWindow()
-    }
-
-    func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
-        return true
-    }
-
-    // MARK: - Main Menu
-
-    func populateMainMenu() {
         let mainMenu = NSMenu(title: "MainMenu")
 
         var menuItem = mainMenu.addItem(withTitle: "Application",
                                         action: nil,
                                         keyEquivalent: "")
-        var submenu = NSMenu(title:"Application")
+        var submenu = NSMenu(title: "Application")
 
         populateApplicationMenu(submenu)
         mainMenu.setSubmenu(submenu, for: menuItem)
@@ -45,7 +32,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         menuItem = mainMenu.addItem(withTitle: "Window",
                                     action: nil,
                                     keyEquivalent: "")
-        submenu = NSMenu(title:NSLocalizedString("Window", comment: "Window menu"))
+        submenu = NSMenu(title: NSLocalizedString("Window", comment: "Window menu"))
         populateWindowMenu(submenu)
         mainMenu.setSubmenu(submenu, for: menuItem)
         NSApp.windowsMenu = submenu
@@ -60,28 +47,44 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         NSApp.mainMenu = mainMenu
     }
 
-    func populateApplicationMenu(_ menu:NSMenu) {
+    func applicationDidFinishLaunching(_ aNotification: Notification) {
+
+        setupView = SetupView()
+
+        setupView.center()
+        setupView.makeKeyAndOrderFront(NSApp)
+
+        NSApp.activate(ignoringOtherApps: true)
+    }
+
+    func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
+        return true
+    }
+
+    // MARK: - Main Menu
+
+    func populateApplicationMenu(_ menu: NSMenu) {
         var title = NSLocalizedString("About", comment: "About menu item") + " " + applicationName
         var menuItem = menu.addItem(withTitle: title,
-                                    action:#selector(NSApplication.orderFrontStandardAboutPanel(_:)),
+                                    action: #selector(NSApplication.orderFrontStandardAboutPanel(_:)),
                                     keyEquivalent: "")
 
         menu.addItem(NSMenuItem.separator())
 
-        title = NSLocalizedString("Services", comment:"Services menu item")
-        menuItem = menu.addItem(withTitle:title,
-                                action:nil,
-                                keyEquivalent:"")
+        title = NSLocalizedString("Services", comment: "Services menu item")
+        menuItem = menu.addItem(withTitle: title,
+                                action: nil,
+                                keyEquivalent: "")
 
-        let servicesMenu = NSMenu(title:"Services")
+        let servicesMenu = NSMenu(title: "Services")
 
-        menu.setSubmenu(servicesMenu, for:menuItem)
+        menu.setSubmenu(servicesMenu, for: menuItem)
 
         NSApp.servicesMenu = servicesMenu
 
         menu.addItem(NSMenuItem.separator())
 
-        title = NSLocalizedString("Hide", comment:"Hide menu item") + " " + applicationName
+        title = NSLocalizedString("Hide", comment: "Hide menu item") + " " + applicationName
         menuItem = menu.addItem(withTitle: title,
                                 action: #selector(NSApplication.hide(_:)),
                                 keyEquivalent: "h")
@@ -98,6 +101,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                                 keyEquivalent: "")
 
         menu.addItem(NSMenuItem.separator())
+
+        title = NSLocalizedString("Quit", comment: "Quit menu item") + " " + applicationName
+        menuItem = menu.addItem(withTitle: title,
+                                action: #selector(NSApplication.terminate(_:)),
+                                keyEquivalent: "q")
     }
 
     func populateWindowMenu(_ menu: NSMenu) {
@@ -119,7 +127,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                      keyEquivalent: "")
     }
 
-    func populateHelpMenu(_ menu:NSMenu) {
+    func populateHelpMenu(_ menu: NSMenu) {
         let title = applicationName + " " + NSLocalizedString("Help", comment: "Help menu item")
 
         menu.addItem(withTitle: title,
